@@ -1,0 +1,7 @@
+product_id,product_name,category,unit_price,unit_cost,reorder_level
+PRD001,Wireless Mouse,Electronics,650.0,300.0,50
+PRD002,Keyboard,Electronics,900.0,420.0,40
+PRD003,Cardboard Box,Packaging,35.0,15.0,500
+PRD004,Plastic Container,Plastics,120.0,55.0,200
+PRD005,Steel Bracket,Raw Materials,250.0,130.0,100
+PRD006,USB Cable,Electronics,180.0,70.0,150

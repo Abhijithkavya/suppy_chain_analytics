@@ -1,0 +1,75 @@
+{
+    "version": 1,
+    "connectionTags": {},
+    "connections": [
+        {
+            "dbType": "MySQL",
+            "caption": "New Connection 1",
+            "description": "A new Database Connection",
+            "options": {
+                "scheme": "mysql",
+                "host": "localhost",
+                "port": 3306,
+                "user": "abhi",
+                "ssl-mode": "PREFERRED",
+                "compression-level": 3,
+                "connect-timeout": 15000
+            },
+            "folderPath": "/",
+            "settings": {
+                "authenticationHints": {
+                    "factors": [
+                        "password"
+                    ]
+                }
+            },
+            "tags": []
+        },
+        {
+            "dbType": "MySQL",
+            "caption": "New Connection 2",
+            "description": "A new Database Connection",
+            "options": {
+                "scheme": "mysql",
+                "host": "localhost",
+                "port": 3306,
+                "user": "abhi",
+                "ssl-mode": "PREFERRED",
+                "compression-level": 3,
+                "connect-timeout": 15000
+            },
+            "folderPath": "/",
+            "settings": {
+                "authenticationHints": {
+                    "factors": [
+                        "password"
+                    ]
+                }
+            },
+            "tags": []
+        },
+        {
+            "dbType": "MySQL",
+            "caption": "New Connection 3",
+            "description": "A new Database Connection",
+            "options": {
+                "scheme": "mysql",
+                "host": "localhost",
+                "port": 3306,
+                "user": "abhi",
+                "ssl-mode": "PREFERRED",
+                "compression-level": 3,
+                "connect-timeout": 15000
+            },
+            "folderPath": "/",
+            "settings": {
+                "authenticationHints": {
+                    "factors": [
+                        "authentication_windows"
+                    ]
+                }
+            },
+            "tags": []
+        }
+    ]
+}

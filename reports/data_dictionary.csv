@@ -1,0 +1,57 @@
+dataset_name,column_name,data_type,description,business_meaning_or_relationship
+suppliers.csv,supplier_id,string,Unique supplier identifier,Primary key
+suppliers.csv,supplier_name,string,Name of the supplier,Supplier business name
+suppliers.csv,city,string,Supplier city,Supplier location
+suppliers.csv,country,string,Supplier country,Supplier location
+suppliers.csv,category,string,Type of goods or service supplied,Supplier category
+suppliers.csv,email,string,Supplier contact email,Contact information
+suppliers.csv,rating,float,Supplier rating,Performance rating
+products.csv,product_id,string,Unique product identifier,Primary key
+products.csv,product_name,string,Name of the product,Product description
+products.csv,category,string,Product category,Product classification
+products.csv,unit_price,float,Selling price per unit,Used to calculate order value
+products.csv,unit_cost,float,Cost per unit,Used to calculate purchase or inventory cost
+products.csv,reorder_level,integer,Stock level at which replenishment is needed,Inventory control threshold
+warehouses.csv,warehouse_id,string,Unique warehouse identifier,Primary key
+warehouses.csv,warehouse_name,string,Name of the warehouse,Warehouse description
+warehouses.csv,city,string,Warehouse city,Warehouse location
+warehouses.csv,capacity_units,integer,Maximum storage capacity in units,Used for warehouse utilization
+inventory.csv,inventory_id,string,Unique inventory record identifier,Primary key
+inventory.csv,product_id,string,Product stored in the warehouse,Foreign key to products.product_id
+inventory.csv,warehouse_id,string,Warehouse holding the product,Foreign key to warehouses.warehouse_id
+inventory.csv,quantity_on_hand,integer,Physical quantity currently in stock,Current stock
+inventory.csv,quantity_reserved,integer,Quantity reserved for orders,Reserved stock
+inventory.csv,safety_stock,integer,Minimum buffer stock,Used for stock risk analysis
+purchases.csv,purchase_id,string,Unique purchase order identifier,Primary key
+purchases.csv,supplier_id,string,Supplier for the purchase,Foreign key to suppliers.supplier_id
+purchases.csv,product_id,string,Purchased product,Foreign key to products.product_id
+purchases.csv,warehouse_id,string,Receiving warehouse,Foreign key to warehouses.warehouse_id
+purchases.csv,purchase_date,date,Date purchase order was recorded,Procurement date
+purchases.csv,quantity,integer,Units ordered from supplier,Purchase quantity
+purchases.csv,unit_cost,float,Cost per purchased unit,Used to calculate purchase_value
+purchases.csv,purchase_status,string,Current purchase order status,"Pending, In Transit or Received"
+orders.csv,order_id,string,Unique customer order identifier,Primary key
+orders.csv,order_date,date,Date customer order was placed,Order date
+orders.csv,product_id,string,Product requested by customer,Foreign key to products.product_id
+orders.csv,quantity,integer,Number of units ordered,Used to calculate order value
+orders.csv,customer_city,string,Customer destination city,Delivery destination
+orders.csv,order_status,string,Current order status,"Processing, Shipped or Delivered"
+stock_movements.csv,movement_id,string,Unique stock movement identifier,Primary key
+stock_movements.csv,movement_date,date,Date stock movement occurred,Movement date
+stock_movements.csv,product_id,string,Product affected by movement,Foreign key to products.product_id
+stock_movements.csv,warehouse_id,string,Warehouse where movement occurred,Foreign key to warehouses.warehouse_id
+stock_movements.csv,movement_type,string,Reason for stock movement,Purchase Receipt or Order Dispatch
+stock_movements.csv,quantity_change,integer,Units added or removed; negative means stock reduction,Stock movement amount
+stock_movements.csv,reference_id,string,Related purchase or customer order identifier,Links to purchase_id or order_id
+shipments.csv,shipment_id,string,Unique shipment identifier,Primary key
+shipments.csv,order_id,string,Customer order being shipped,Foreign key to orders.order_id
+shipments.csv,ship_date,date,Date shipment was dispatched,Shipping date
+shipments.csv,expected_delivery_date,date,Expected date of delivery,Planned delivery date
+shipments.csv,carrier,string,Transport company handling shipment,Carrier name
+shipments.csv,shipping_cost,float,Cost of transporting the shipment,Logistics cost
+shipments.csv,shipment_status,string,Current shipment status,Delivered or In Transit
+deliveries.csv,delivery_id,string,Unique delivery record identifier,Primary key
+deliveries.csv,shipment_id,string,Shipment associated with delivery,Foreign key to shipments.shipment_id
+deliveries.csv,expected_delivery_date,date,Expected delivery date,Planned delivery date
+deliveries.csv,actual_delivery_date,date,Actual date delivery was completed; blank if pending,Used to calculate delivery delay
+deliveries.csv,delivery_status,string,Delivery completion status,Delivered or Pending

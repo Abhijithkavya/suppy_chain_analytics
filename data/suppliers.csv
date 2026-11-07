@@ -1,0 +1,6 @@
+supplier_id,supplier_name,city,country,category,email,rating
+SUP001,Alpha Components,Chennai,India,Electronics,supplier1@example.com,4.7
+SUP002,Bright Packaging,Kochi,India,Packaging,supplier2@example.com,4.3
+SUP003,Global Metals,Bengaluru,India,Raw Materials,supplier3@example.com,4.1
+SUP004,Prime Plastics,Coimbatore,India,Plastics,supplier4@example.com,4.5
+SUP005,Metro Logistics Supply,Hyderabad,India,Logistics,supplier5@example.com,3.9
